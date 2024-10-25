@@ -5,7 +5,7 @@
 
 <p align="center">
   <a href="https://github.com/Crocodile-Coding-Club/ldtklib/commits/main/"><img src="https://img.shields.io/github/last-commit/Crocodile-Coding-Club/ldtklib?style=for-the-badge"></a>
-  <a href="https://github.com/Crocodile-Coding-Club/ldtklib/commits/main/"><img src="https://img.shields.io/github/v/release/Crocodile-Coding-Club/ldtklib?style=for-the-badge"></a>
+  <a href="https://github.com/Crocodile-Coding-Club/ldtklib/releases/latest"><img src="https://img.shields.io/github/v/release/Crocodile-Coding-Club/ldtklib?style=for-the-badge"></a>
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Language-Python-FFD43B?style=for-the-badge"></a>
   <a href="https://flit.pypa.io/en/stable/"><img src="https://img.shields.io/badge/Tool-Flit-31c79a?style=for-the-badge"></a>
   <a href="https://en.wikipedia.org/wiki/MIT_License"><img src="https://img.shields.io/badge/License-MIT-red?style=for-the-badge"></a>
