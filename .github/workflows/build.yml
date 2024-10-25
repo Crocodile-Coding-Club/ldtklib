@@ -1,0 +1,41 @@
+name: Build with filt
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_call:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Upgrading pip
+        run: |
+          python -m pip install --upgrade pip
+
+      - name: Installing flit
+        run: |
+          pip install flit
+
+      - name: Build project with flit
+        run: |
+          flit build
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-artifact
+          path: dist/*.whl
