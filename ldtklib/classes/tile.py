@@ -6,36 +6,39 @@ class LDtkTileData:
     ----------
     tile_id : int
         The id of the tile in the tileset
-    opacity : int
+    tileset_relative_path : str | None
+        Relative path of the tileset.
+    opacity : float
         Opacity of the tile. Goes from 0 to 1.
-    flip_bits: int
-        A 2-bits integer to represent the mirror transformations of the tile.
-        f=0 (no flip), f=1 (X flip only), f=2 (Y flip only), f=3 (both flips)
     x : int
-        The x position of the tile on the layer.
+        The x position of the tile.
     y : int
-        The y position of the tile on the layer.
+        The y position of the tile.
     width : int
         The width of the tile.
     height : int
         The height of the tile.
+    flipbits : int
+        A 2-bits integer to represent the mirror transformations of the tile.
+        f=0 (no flip), f=1 (X flip only), f=2 (Y flip only), f=3 (both flips)
     source_x : int
         The x position of the tile on the tileset.
     source_y : int
         The y position of the tile on the tileset.
     """
 
-    def __init__(self, tile_data:dict):
+    def __init__(self, tile_data: dict, tileset_relative_path: str | None = None):
         """Constructor of the TileData class
 
         Args:
-            tile_data (dict): Raw JSON data of the tile
+            tile_data (dict): Raw JSON data of the tile.
+            tileset_relative_path (str | None): Relative path of the tileset.
         """
         self.tile_id: int = tile_data.get("t")
 
-        self.opacity: int = tile_data.get("a")
+        self.tileset_relative_path = tileset_relative_path
 
-        self.flip_bits: int = tile_data.get("f")
+        self.opacity: float = tile_data.get("a")
 
         self.x: int = tile_data.get("px")[0]
         self.y: int = tile_data.get("px")[1]
@@ -43,10 +46,10 @@ class LDtkTileData:
         self.width = tile_data.get("__cWid")
         self.height = tile_data.get("__cHei")
 
+        self.flipbits: int = tile_data.get("f")
 
         self.source_x: int = tile_data.get("src")[0]
         self.source_y: int = tile_data.get("src")[1]
-
 
     def getTileId(self) -> int:
         """Method to get the id of the tile.
@@ -56,13 +59,37 @@ class LDtkTileData:
         """
         return self.tile_id
     
-    def getX(self) -> int:
-        """Method to get the x position of the tile on the layer.
+    def getTilesetRelativePath(self) -> str | None:
+        """Method to get the relative path of the tileset.
 
         Returns:
-            int: X position of the tile on the layer.
+            str | None: Relative path of the tileset
+        """
+        return self.tileset_relative_path
+    
+    def getOpacity(self) -> int:
+        """Method to get the opacity of the tile.
+
+        Returns:
+            int: Opacity of the tile.
+        """
+        return self.opacity
+    
+    def getX(self) -> int:
+        """Method to get the x position of the tile.
+
+        Returns:
+            int: X position of the tile.
         """
         return self.x
+    
+    def getY(self) -> int:
+        """Method to get the y position of the tile.
+
+        Returns:
+            int: Y position of the tile.
+        """
+        return self.y
     
     def getWidth(self) -> int:
         """Method to get the width of the tile.
@@ -80,22 +107,6 @@ class LDtkTileData:
         """
         return self.height
     
-    def getY(self) -> int:
-        """Method to get the y position of the tile on the layer.
-
-        Returns:
-            int: Y position of the tile on the layer.
-        """
-        return self.y
-    
-    def getOpacity(self) -> int:
-        """Method to get the opacity of the tile on the layer.
-
-        Returns:
-            int: Opacity of the tile on the layer.
-        """
-        return self.opacity
-    
     def getFlipbits(self) -> int:
         """Method to get the flipbits of the tile.
 
@@ -103,9 +114,9 @@ class LDtkTileData:
         f=0 (no flip), f=1 (X flip only), f=2 (Y flip only), f=3 (both flips)
 
         Returns:
-            int: Flipbits of the tile on the layer.
+            int: Flipbits of the tile.
         """
-        return self.flip_bits
+        return self.flipbits
     
     def getSourceX(self) -> int:
         """Method to get the x position of the tile on the tileset
@@ -123,3 +134,50 @@ class LDtkTileData:
         """
         return self.source_y
     
+    def setOpacity(self, opacity: float) -> None:
+        """Method to set the opacity of the tile.
+
+        Args:
+            opacity (float): New opacity of the tile.
+        """
+        self.opacity = opacity
+    
+    def setX(self, x: int) -> None:
+        """Method to set the x position of the tile.
+
+        Args:
+            x (int): New x position of the tile.
+        """
+        self.x = x
+    
+    def setY(self, y: int) -> None:
+        """Method to set the y position of the tile.
+
+        Args:
+            y (int): New y position of the tile.
+        """
+        self.y = y
+    
+    def setWidth(self, width: int) -> None:
+        """Method to set the width position of the tile.
+
+        Args:
+            width (int): New width of the tile.
+        """
+        self.width = width
+    
+    def setHeight(self, height: int) -> None:
+        """Method to set the height position of the tile.
+
+        Args:
+            height (int): New height of the tile.
+        """
+        self.height = height
+    
+    def setFlipbits(self, flipbits: int) -> None:
+        """Method to set the flipbits of the tile.
+
+        Args:
+            flipbits (int): New flipbits of the tile.
+        """
+        self.flipbits = flipbits

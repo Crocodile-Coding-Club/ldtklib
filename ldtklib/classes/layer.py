@@ -12,10 +12,11 @@ class LDtkLayerData:
         self.int_grid = layer_data.get("intGridCsv")
         self.autoLayerTiles = layer_data.get("autoLayerTiles")
         self.seed = layer_data.get("seed")
+        self.tilesetRelPath = layer_data.get("__tilesetRelPath")
         self.overrideTilesetUid = layer_data.get("overrideTilesetUid")
         self.tile_list = []
         for tile in layer_data.get("gridTiles"):
-            self.tile_list.append(LDtkTileData(tile))
+            self.tile_list.append(LDtkTileData(tile, self.tilesetRelPath))
         self.entity_list = []
         for entity in layer_data.get("entityInstances"):
-            self.entity_list.append(LDtkEntityData(entity))
+            self.entity_list.append(LDtkEntityData(entity, self.tilesetRelPath))
