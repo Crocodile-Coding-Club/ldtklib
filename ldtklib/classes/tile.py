@@ -1,11 +1,10 @@
 class LDtkTileData:
-    """
-    A class to represent a person.
+    """LDtk tile data.
 
     Attributes
     ----------
     tile_id : int
-        The id of the tile in the tileset
+        The id of the tile.
     tileset_relative_path : str | None
         Relative path of the tileset.
     opacity : float
@@ -28,7 +27,7 @@ class LDtkTileData:
     """
 
     def __init__(self, tile_data: dict, tileset_relative_path: str | None = None):
-        """Constructor of the TileData class
+        """Constructor of the LDtkTileData class
 
         Args:
             tile_data (dict): Raw JSON data of the tile.
