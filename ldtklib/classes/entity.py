@@ -140,3 +140,35 @@ class LDtkEntityData:
             dict: The raw data of the entity.
         """
         return self.raw_data
+    
+    def setX(self, x: int) -> None:
+        """Method to set the x position of the entity.
+
+        Args:
+            x (int): New x position of the entity.
+        """
+        self.x = x
+
+    def setY(self, y: int) -> None:
+        """Method to set the y position of the entity.
+
+        Args:
+            y (int): New y position of the entity.
+        """
+        self.y = y
+
+    def setWidth(self, width: int) -> None:
+        """Method to set the width of the entity.
+
+        Args:
+            width (int): New width of the entity.
+        """
+        self.width = width
+
+    def setHeight(self, height: int) -> None:
+        """Method to set the height of the entity.
+
+        Args:
+            height (int): New height of the entity.
+        """
+        self.height = height
