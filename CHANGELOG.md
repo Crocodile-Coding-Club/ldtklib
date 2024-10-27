@@ -1,9 +1,27 @@
+# [Release 0.3.0](https://github.com/Crocodile-Coding-Club/ldtklib/releases/tag/v0.3.0)
+
+## Additions
+
+* LDtkLayerData docstrings, getters, setters -> [@dalmatheo](https://github.com/dalmatheo)
+
+## Deletions
+
+* overrideTilesetUid in LDtkLayerData
+
+## Fixes
+
+/
+
+## Links
+
+**Full Changelog**: https://github.com/Crocodile-Coding-Club/ldtklib/compare/v0.2.0...v0.3.0
+___
 # [Release 0.2.0](https://github.com/Crocodile-Coding-Club/ldtklib/releases/tag/v0.2.0)
 
 ## Additions
 
-* Tile setters -> [@dalmatheo](https://github.com/dalmatheo)
-* Entity getters and setters -> [@dalmatheo](https://github.com/dalmatheo)
+* LDtkTileData setters -> [@dalmatheo](https://github.com/dalmatheo)
+* LDtkEntityData getters and setters -> [@dalmatheo](https://github.com/dalmatheo)
 
 ## Deletions
 
