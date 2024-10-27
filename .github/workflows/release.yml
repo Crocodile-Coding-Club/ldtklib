@@ -1,4 +1,4 @@
-name: Release with filt
+name: Release
 
 on:
   push:
@@ -15,14 +15,36 @@ jobs:
     permissions:
       contents: write
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Download artifacts
         uses: actions/download-artifact@v4
         id: download
         with:
           name: build-artifact
+
+      - name: Create Body
+        id: create_body
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('node:fs');
+
+
+            const lines = fs.readFileSync('./CHANGELOG.md', 'utf8').split("\n")
+            let changelog = ""
+            for (let line of lines) {
+                if (line == "___") break
+                changelog+=line + "\n"
+            }
+            return changelog
+          result-encoding: string
+
       - name: Create GitHub release
         uses: softprops/action-gh-release@v2
         with:
+          body: ${{ steps.create_body.outputs.result }}
           files: ${{ steps.download.outputs.download-path }}/*.whl
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
