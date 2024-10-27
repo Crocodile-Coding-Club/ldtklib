@@ -24,6 +24,8 @@ class LDtkTileData:
         The x position of the tile on the tileset.
     source_y : int
         The y position of the tile on the tileset.
+    raw_data : dict
+        The raw data of the tile.
     """
 
     def __init__(self, tile_data: dict, tileset_relative_path: str | None = None):
@@ -35,7 +37,7 @@ class LDtkTileData:
         """
         self.tile_id: int = tile_data.get("t")
 
-        self.tileset_relative_path = tileset_relative_path
+        self.tileset_relative_path: str = tileset_relative_path
 
         self.opacity: float = tile_data.get("a")
 
@@ -50,6 +52,8 @@ class LDtkTileData:
         self.source_x: int = tile_data.get("src")[0]
         self.source_y: int = tile_data.get("src")[1]
 
+        self.raw_data = tile_data
+
     def getTileId(self) -> int:
         """Method to get the id of the tile.
 
@@ -62,7 +66,7 @@ class LDtkTileData:
         """Method to get the relative path of the tileset.
 
         Returns:
-            str | None: Relative path of the tileset
+            str | None: The relative path of the tileset, if available.
         """
         return self.tileset_relative_path
     
@@ -78,7 +82,7 @@ class LDtkTileData:
         """Method to get the x position of the tile.
 
         Returns:
-            int: X position of the tile.
+            int: The x position of the tile.
         """
         return self.x
     
@@ -86,7 +90,7 @@ class LDtkTileData:
         """Method to get the y position of the tile.
 
         Returns:
-            int: Y position of the tile.
+            int: The y position of the tile.
         """
         return self.y
     
@@ -94,7 +98,7 @@ class LDtkTileData:
         """Method to get the width of the tile.
 
         Returns:
-            int: Width of the tile.
+            int: The width of the tile.
         """
         return self.width
     
@@ -102,7 +106,7 @@ class LDtkTileData:
         """Method to get the height of the tile.
 
         Returns:
-            int: Height of the tile.
+            int: The height of the tile.
         """
         return self.height
     
@@ -121,7 +125,7 @@ class LDtkTileData:
         """Method to get the x position of the tile on the tileset
 
         Returns:
-            int: X position of the tile on the tileset
+            int: The x position of the tile on the tileset.
         """
         return self.source_x
     
@@ -129,9 +133,17 @@ class LDtkTileData:
         """Method to get the y position of the tile on the tileset
 
         Returns:
-            int: Y position of the tile on the tileset
+            int: The y position of the tile on the tileset.
         """
         return self.source_y
+    
+    def getRawData(self) -> dict:
+        """Method to get the raw data of the tile.
+
+        Returns:
+            dict: The raw data of the tile.
+        """
+        return self.raw_data
     
     def setOpacity(self, opacity: float) -> None:
         """Method to set the opacity of the tile.
