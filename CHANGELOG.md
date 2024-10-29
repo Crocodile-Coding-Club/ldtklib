@@ -1,3 +1,21 @@
+# [Release 0.5.0](https://github.com/Crocodile-Coding-Club/ldtklib/releases/tag/v0.5.0)
+
+## Additions
+
+* LDtkWorldData docstrings, getters -> [@dalmatheo](https://github.com/dalmatheo)
+
+## Deletions
+
+/
+
+## Fixes
+
+/
+
+## Links
+
+**Full Changelog**: https://github.com/Crocodile-Coding-Club/ldtklib/compare/v0.4.0...v0.5.0
+___
 # [Release 0.4.0](https://github.com/Crocodile-Coding-Club/ldtklib/releases/tag/v0.4.0)
 
 ## Additions
