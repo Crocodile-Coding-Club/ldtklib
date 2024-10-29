@@ -1,3 +1,21 @@
+# [Release 0.6.0](https://github.com/Crocodile-Coding-Club/ldtklib/releases/tag/v0.6.0)
+
+## Additions
+
+/
+
+## Deletions
+
+/
+
+## Fixes
+
+* LDtkFile -> Changed from asking a file name to asking the relative path. [@dalmatheo](https://github.com/dalmatheo)
+
+## Links
+
+**Full Changelog**: https://github.com/Crocodile-Coding-Club/ldtklib/compare/v0.5.1...v0.6.0
+___
 # [Release 0.5.1](https://github.com/Crocodile-Coding-Club/ldtklib/releases/tag/v0.5.1)
 
 ## Additions
@@ -17,23 +35,6 @@
 ## Links
 
 **Full Changelog**: https://github.com/Crocodile-Coding-Club/ldtklib/compare/v0.5.0...v0.5.1
-# [Release 0.5.1](https://github.com/Crocodile-Coding-Club/ldtklib/releases/tag/v0.5.1)
-
-## Additions
-
-* LDtkWorldData docstrings, getters -> [@dalmatheo](https://github.com/dalmatheo)
-
-## Deletions
-
-/
-
-## Fixes
-
-/
-
-## Links
-
-**Full Changelog**: https://github.com/Crocodile-Coding-Club/ldtklib/compare/v0.4.0...v0.5.0
 ___
 # [Release 0.4.0](https://github.com/Crocodile-Coding-Club/ldtklib/releases/tag/v0.4.0)
 
