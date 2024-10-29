@@ -12,7 +12,7 @@
 
 ## Fixes
 
-/
+* LDtkLevelData constructor docstring -> [@dalmatheo](https://github.com/dalmatheo)
 
 ## Links
 

@@ -36,6 +36,11 @@ class LDtkLevelData:
     """
 
     def __init__(self, level_data: dict):
+        """Constructor for the LDtkLevelData class.
+
+        Args:
+            level_data (dict): Raw JSON data of the level.
+        """
         self.identifier: str = level_data.get("identifier")
         self.level_unique_id: str = level_data.get("iid")
 
