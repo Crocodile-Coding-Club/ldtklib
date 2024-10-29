@@ -2,11 +2,11 @@
 
 ## Additions
 
-* LDtkLayerData docstrings, getters, setters -> [@dalmatheo](https://github.com/dalmatheo)
+* LDtkLevelData docstrings, getters -> [@dalmatheo](https://github.com/dalmatheo)
 
 ## Deletions
 
-* overrideTilesetUid in LDtkLayerData -> [@dalmatheo](https://github.com/dalmatheo)
+/
 
 ## Fixes
 
