@@ -15,7 +15,8 @@
 ## Links
 
 **Full Changelog**: https://github.com/Crocodile-Coding-Club/ldtklib/compare/v0.3.0...v0.4.0
-___# [Release 0.3.0](https://github.com/Crocodile-Coding-Club/ldtklib/releases/tag/v0.4.0)
+___
+# [Release 0.3.0](https://github.com/Crocodile-Coding-Club/ldtklib/releases/tag/v0.4.0)
 
 ## Additions
 
