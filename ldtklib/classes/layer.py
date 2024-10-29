@@ -66,6 +66,8 @@ class LDtkLayerData:
         
         self.seed: int = layer_data.get("seed")
 
+        self.raw_data = layer_data
+
     def getLayerUniqueID(self) -> str:
         """Get the unique ID of the layer.
 
@@ -177,6 +179,14 @@ class LDtkLayerData:
             int: Seed of the layer.
         """
         return self.seed
+    
+    def getRawData(self) -> dict:
+        """Method to get the raw data of the layer.
+
+        Returns:
+            dict: The raw data of the layer.
+        """
+        return self.raw_data
     
     def setVisibility(self, visibility: bool) -> None:
         """Set the visibility of the layer.

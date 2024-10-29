@@ -58,6 +58,8 @@ class LDtkLevelData:
         self.height: int = level_data("pxHei")
 
         self.layerInstances: list[LDtkLayerData] = [LDtkLayerData(layer) for layer in level_data.get("layerInstances", [])]
+
+        self.raw_data = level_data
     
     def getIdentifier(self) -> str:
         """Get the identifier of the level.
@@ -170,3 +172,11 @@ class LDtkLevelData:
             list[LDtkLayerData]: List of layer instances.
         """
         return self.layerInstances
+    
+    def getRawData(self) -> dict:
+        """Method to get the raw data of the level.
+
+        Returns:
+            dict: The raw data of the level.
+        """
+        return self.raw_data

@@ -25,11 +25,17 @@ class LDtkWorldData:
             world_data (dict): Raw JSON data of the world.
         """
         self.identifier: str = world_data.get("identifier")
+
         self.world_unique_id: str = world_data.get("iid")
+
         self.levels: list[LDtkLevelData] = [LDtkLevelData(level) for level in world_data.get("levels", [])]
+
         self.width: int = world_data.get("worldGridWidth")
         self.height: int = world_data.get("worldGridHeight")
+
         self.layout: str = world_data.get("worldLayout")
+
+        self.raw_data = world_data
 
     def getIdentifier(self) -> str:
         """Get the identifier of the world.
@@ -78,3 +84,11 @@ class LDtkWorldData:
             str: Layout type of the world.
         """
         return self.layout
+    
+    def getRawData(self) -> dict:
+        """Method to get the raw data of the world.
+
+        Returns:
+            dict: The raw data of the world.
+        """
+        return self.raw_data

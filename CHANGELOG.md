@@ -1,4 +1,23 @@
-# [Release 0.5.0](https://github.com/Crocodile-Coding-Club/ldtklib/releases/tag/v0.5.0)
+# [Release 0.5.1](https://github.com/Crocodile-Coding-Club/ldtklib/releases/tag/v0.5.1)
+
+## Additions
+
+* LDtkLayerData getRawData -> [@dalmatheo](https://github.com/dalmatheo)
+* LDtkLevelData getRawData -> [@dalmatheo](https://github.com/dalmatheo)
+* LDtkWorldData getRawData -> [@dalmatheo](https://github.com/dalmatheo)
+
+## Deletions
+
+/
+
+## Fixes
+
+/
+
+## Links
+
+**Full Changelog**: https://github.com/Crocodile-Coding-Club/ldtklib/compare/v0.5.0...v0.5.1
+# [Release 0.5.1](https://github.com/Crocodile-Coding-Club/ldtklib/releases/tag/v0.5.1)
 
 ## Additions
 
