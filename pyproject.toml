@@ -5,7 +5,7 @@ build-backend = "flit_core.buildapi"
 [project]
 name = "ldtklib"
 description = 'A package that can handle LDtk .ldtk files'
-version = "0.1.0"
+version = "1.0.0"
 
 authors = [
   { name = "dalmatheo", email = "134540422+dalmatheo@users.noreply.github.com" },

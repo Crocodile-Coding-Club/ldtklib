@@ -1,3 +1,21 @@
+# [Release 1.0.0](https://github.com/Crocodile-Coding-Club/ldtklib/releases/tag/v1.0.0)
+
+## Additions
+
+* LDtkFile -> Created docstrings and getter methods. [@dalmatheo](https://github.com/dalmatheo)
+
+## Deletions
+
+/
+
+## Fixes
+
+* pyproject -> Edited the version to 1.0.0
+
+## Links
+
+**Full Changelog**: https://github.com/Crocodile-Coding-Club/ldtklib/compare/v0.6.0...v1.0.0
+___
 # [Release 0.6.0](https://github.com/Crocodile-Coding-Club/ldtklib/releases/tag/v0.6.0)
 
 ## Additions
