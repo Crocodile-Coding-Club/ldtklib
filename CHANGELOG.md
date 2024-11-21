@@ -1,3 +1,21 @@
+# [Release 1.0.1](https://github.com/Crocodile-Coding-Club/ldtklib/releases/tag/v1.0.1)
+
+## Additions
+
+/
+
+## Deletions
+
+/
+
+## Fixes
+
+* LDtkLevelData -> Fixed self.height. [@dalmatheo](https://github.com/dalmatheo)
+
+## Links
+
+**Full Changelog**: https://github.com/Crocodile-Coding-Club/ldtklib/compare/v0.6.0...v1.0.1
+___
 # [Release 1.0.0](https://github.com/Crocodile-Coding-Club/ldtklib/releases/tag/v1.0.0)
 
 ## Additions

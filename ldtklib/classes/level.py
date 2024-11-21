@@ -1,5 +1,6 @@
 from .layer import LDtkLayerData
 
+
 class LDtkLevelData:
     """LDtk level data.
 
@@ -60,12 +61,14 @@ class LDtkLevelData:
         self.y: int = level_data.get("worldY")
 
         self.width: int = level_data.get("pxWid")
-        self.height: int = level_data("pxHei")
+        self.height: int = level_data.get("pxHei")
 
-        self.layerInstances: list[LDtkLayerData] = [LDtkLayerData(layer) for layer in level_data.get("layerInstances", [])]
+        self.layerInstances: list[LDtkLayerData] = [
+            LDtkLayerData(layer) for layer in level_data.get("layerInstances", [])
+        ]
 
         self.raw_data = level_data
-    
+
     def getIdentifier(self) -> str:
         """Get the identifier of the level.
 
@@ -177,7 +180,7 @@ class LDtkLevelData:
             list[LDtkLayerData]: List of layer instances.
         """
         return self.layerInstances
-    
+
     def getRawData(self) -> dict:
         """Method to get the raw data of the level.
 
